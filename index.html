@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+        --font-display:'Roboto'
+    }
+    </style>
+    <title>WebFlow</title>
+</head>
+
+<body class="bg-[rgb(25,20,20)] font-display">
+    <!--header-->
+    <header
+        class="w-[67%] m-auto bg-[rgb(20,18,17)] fixed top-3 left-[16.5%] flex items-center gap-10 p-3 border border-slate-800 h-[72px] rounded-xl mt-8">
+        <img src="https://cdn.prod.website-files.com/66c74b953957211a234767e2/66cdca3b94e922d3e736d6ea_66cc66f1b0b570decefe3f3b_New%20Logo.svg"
+            alt="" class="w-32">
+        <nav>
+            <ul class="flex gap-12 justify-center items-center">
+                <li data-status='close'
+                    class="text-white text-sm flex gap-2 relative items-center cursor-pointer p-2 transition-all hover:rounded hover:bg-[rgba(55,50,47,0.79)]">
+                    Product<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    <ul
+                        class="w-72 h-96 top-14  rounded-xl hidden opacity-0  flex-col gap-7 p-3 bg-[rgb(20,18,17)] justify-center border-slate-800 border absolute">
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">What you can do</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Set up your project</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Software documentation</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Roadmap</p>
+                                <p class="text-sm">Upcoming features</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Changelog</p>
+                                <p class="text-sm">Released features</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li data-status='close'
+                    class="text-white text-sm flex gap-2 relative items-center cursor-pointer p-2 transition-all hover:rounded hover:bg-[rgba(55,50,47,0.79)]">
+                    Resources<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    <ul
+                        class="w-72 h-96 top-14  rounded-xl hidden opacity-0  flex-col gap-7 p-3 bg-[rgb(20,18,17)] justify-center border-slate-800 border absolute">
+                        <li class="flex gap-3 items-center ">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">What you can do</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Set up your project</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Software documentation</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Roadmap</p>
+                                <p class="text-sm">Upcoming features</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Changelog</p>
+                                <p class="text-sm">Released features</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li data-status='close'
+                    class="text-white text-sm flex gap-2 relative items-center cursor-pointer p-2 transition-all hover:rounded hover:bg-[rgba(55,50,47,0.79)]">
+                    Community<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    <ul
+                        class="w-72 h-96 top-14  rounded-xl hidden opacity-0  flex-col gap-7 p-3 bg-[rgb(20,18,17)] justify-center border-slate-800 border absolute">
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">What you can do</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Set up your project</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                                </svg>
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Features</p>
+                                <p class="text-sm">Software documentation</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Roadmap</p>
+                                <p class="text-sm">Upcoming features</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <div
+                                class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-12 rounded-md ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                                </svg>
+
+
+                            </div>
+                            <div>
+                                <p class="font-bold text-base">Changelog</p>
+                                <p class="text-sm">Released features</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <p
+                    class="text-white text-sm flex items-center cursor-pointer p-2 transition-all hover:rounded hover:bg-[rgba(55,50,47,0.79)]">
+                    Pricing</p>
+                <div
+                    class="shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] text-white text-sm flex items-center  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-12 h-9 rounded-md ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </div>
+                <div
+                    class="text-white text-sm flex items-center gap-2  justify-center cursor-pointer bg-[rgb(55,44,44)] border-[rgb(72,68,68)] border w-36 h-10 rounded-md ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+                    Install Apps
+                </div>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero section -->
+    <section class="w-full h-[100vh] ">
+        <div class="w-full h-full flex flex-col justify-center  items-center">
+            <p class="text-8xl mt-7 font-medium text-yellow-100">WebFlow & Shopify</p>
+            <p class="text-[180px] font-bold text-orange-400 animate-gradient-text">Connected</p>
+            <p class="text-xl text-orange-300">Explore the easiest way to design complex Shopify stores completely
+                within
+                Webflow,assisted by AI</p>
+        </div>
+    </section>
+    <!-- video section -->
+    <section class="w-full h-[100vh] flex justify-center items-center">
+        <div class="w-[80%] h-[95%] bg-[rgb(37,26,26)] rounded-2xl flex justify-center items-center">
+            <video class="w-[100%] h-[90%]"
+                src="assets/video/66c74b953957211a234767e2_66e7f5361965c0ae8138e00b_comp_def_2-transcode.mp4" autoplay
+                loop muted></video>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

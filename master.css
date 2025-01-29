@@ -1,0 +1,11 @@
+@keyframes gradientColor {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ff8c00;
+  }
+}
+.animate-gradient-text {
+  animation: gradientColor 3s infinite alternate;
+}
