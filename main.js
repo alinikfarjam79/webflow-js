@@ -3,6 +3,7 @@ const { animate, scroll } = Motion;
 
 let headerMen = document.querySelectorAll('header > nav > ul > li');
 let body = document.querySelector('body');
+let TextMotion = document.querySelector('.text');
 // const { animate, scroll } = window.Motion;
 const motionSections = document.querySelectorAll('.cont')
 // header 
@@ -70,6 +71,8 @@ headerMen.forEach((item, index) => {
 // })
 // 
 
+
+// motion sections
 const observer = new IntersectionObserver(
     (entries, observer) => {
         entries.forEach((entry) => {
@@ -100,3 +103,46 @@ const observer = new IntersectionObserver(
 );
 
 motionSections.forEach((section) => observer.observe(section));
+
+
+//motion text section 
+const ob = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                const p = entry.target.querySelectorAll("p");
+                console.log(p);
+
+                if (p) {
+                    p.forEach((par, index) => {
+                        if (index == 0) {
+                            scroll(animate(par,
+                                { left: [0, -800], },
+                                { ease: "easeOut", duration: 0.1 }
+                            ))
+                        } else {
+                            scroll(animate(par,
+                                { right: [-800, -1100], },
+                                { ease: "easeOut", duration: 0.1 }
+                            ))
+                        }
+                    })
+
+                    // animate(header,
+                    //     { opacity: 1, y: 0 },
+                    //     { ease: "easeOut", duration: 1 }
+                    // );
+                    // animate(entry.target, { transform: ["scale(0.7)", "scale(1)"] }, { ease: 'linear', duration: 0.7 })
+
+                    // observer.unobserve(entry.target);
+                }
+            } else {
+                entry.target.classList.remove('cont2')
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
+ob.observe(TextMotion)
+// motionSections.forEach((section) => );
