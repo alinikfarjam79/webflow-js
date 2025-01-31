@@ -99,7 +99,7 @@ const observer = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.4 }
+    { threshold: 0.2 }
 );
 
 motionSections.forEach((section) => observer.observe(section));
@@ -123,7 +123,7 @@ const ob = new IntersectionObserver(
                             ))
                         } else {
                             scroll(animate(par,
-                                { right: [-800, -1100], },
+                                { right: [-800, -1700], },
                                 { ease: "easeOut", duration: 0.1 }
                             ))
                         }
