@@ -1,6 +1,10 @@
+// import { scroll } from "./motion";\
+const { animate, scroll } = Motion;
+
 let headerMen = document.querySelectorAll('header > nav > ul > li');
 let body = document.querySelector('body');
-
+// const { animate, scroll } = window.Motion;
+const motionSections = document.querySelectorAll('.cont')
 // header 
 body.addEventListener('click', function () {
     headerMen.forEach((menu, menuindex) => {
@@ -54,3 +58,45 @@ headerMen.forEach((item, index) => {
         }
     })
 })
+
+// motion
+// scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }));
+// motionSections.forEach((section) => {
+// section.classList.add('cont');
+//     const header = section.querySelector("h2")
+//     scroll(animate(header, { y: [-400, 400] }, { ease: "linear" }), {
+//         target: header,
+//     })
+// })
+// 
+
+const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            // entry.target.style.scale = "0.7"
+            if (entry.isIntersecting) {
+                entry.target.classList.add('cont2')
+                const header = entry.target.querySelector("h2");
+
+                if (header) {
+                    // entry.target.style.scale = "0.7"
+                    // header.style.opacity = "0";
+                    // header.style.transform = "translateY(100px)";
+
+                    animate(header,
+                        { opacity: 1, y: 0 },
+                        { ease: "easeOut", duration: 1 }
+                    );
+                    // animate(entry.target, { transform: ["scale(0.7)", "scale(1)"] }, { ease: 'linear', duration: 0.7 })
+
+                    // observer.unobserve(entry.target);
+                }
+            } else {
+                entry.target.classList.remove('cont2')
+            }
+        });
+    },
+    { threshold: 0.4 }
+);
+
+motionSections.forEach((section) => observer.observe(section));

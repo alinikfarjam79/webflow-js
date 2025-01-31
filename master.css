@@ -6,6 +6,37 @@
     color: #ff8c00;
   }
 }
+@keyframes vertical-marquee {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  animation: vertical-marquee 100s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
 .animate-gradient-text {
   animation: gradientColor 3s infinite alternate;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+.cont {
+  /* scroll-snap-align: start; */
+  /* scale: 0.7; */
+}
+.cont2 {
+  scroll-snap-align: start;
 }
